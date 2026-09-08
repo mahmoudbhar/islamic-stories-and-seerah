@@ -1,0 +1,23 @@
+{
+  "short_name": "قصص إسلامية",
+  "name": "تطبيق القصص الإسلامية",
+  "icons": [
+    {
+      "src": "mah.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "mah.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#ffffff",
+  "theme_color": "#121212",
+  "display": "standalone",
+  "orientation": "portrait",
+  "dir": "rtl",
+  "lang": "ar"
+}

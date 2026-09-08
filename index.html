@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>روائع القصص الإسلامية - المكتبة الشاملة</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Top Sticky Wrapper (Header + Search + Nav Category Bar) -->
+    <div class="sticky-top-wrapper">
+        <header class="main-header">
+            <div class="logo-container">
+                <div class="logo-icon">📖</div>
+                <h1>روائع القصص الإسلامية والسيرة</h1>
+            </div>
+            <div class="header-controls">
+                <!-- زر تثبيت التطبيق بإيموجي الهاتف والتنزيل -->
+                <button id="installAppBtn" class="btn-action hidden" title="تثبيت التطبيق على جهازك">
+                    <span>📲</span>
+                    <span>تثبيت تطبيق القصص 📥</span>
+                </button>
+                <button id="themeToggleBtn" aria-label="تبديل الوضع">🌙</button>
+            </div>
+        </header>
+
+        <section class="controls-section">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="ابحث في القصص والسيرة والمواعظ...">
+            </div>
+
+            <nav class="categories-nav" id="categoriesNav">
+                <button class="cat-btn active" data-category="all">📚 الكل</button>
+                <button class="cat-btn" data-category="prophets">🕌 قصص الأنبياء</button>
+                <button class="cat-btn" data-category="seerah">🌿 السيرة النبوية</button>
+                <button class="cat-btn" data-category="companions">⚔️ الصحابة والتابعين</button>
+                <button class="cat-btn" data-category="quran">📖 قصص القرآن</button>
+                <button class="cat-btn" data-category="wisdom">💡 عبر ومواعظ</button>
+                <button class="cat-btn" data-category="kids">👶 قصص أطفال</button>
+                <button class="cat-btn" data-category="favorites">⭐ المفضلة</button>
+            </nav>
+        </section>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="container">
+        <!-- Stories Grid View -->
+        <div id="storiesGrid" class="stories-grid"></div>
+
+        <!-- Single Story View Modal/Section -->
+        <div id="storyDetail" class="story-detail hidden">
+            <button id="backBtn" class="back-btn">➔ العودة لقائمة القصص</button>
+            <article class="story-card-full">
+                <div class="story-header">
+                    <span id="detailCategory" class="badge"></span>
+                    <h2 id="detailTitle"></h2>
+                    <div class="audio-controls">
+                        <button id="ttsBtn" class="btn-action">🔊 استمع للقصة</button>
+                        <button id="favBtn" class="btn-action">⭐ إضافة للمفضلة</button>
+                        <button id="readBtn" class="btn-action">✅ تعليم كـ مقروء</button>
+                        <button id="copyBtn" class="btn-action">📋 نسخ القصة</button>
+
+
+                        <div class="font-controls">
+                            <span>حجم الخط:</span>
+                            <button id="decreaseFont">A-</button>
+                            <button id="increaseFont">A+</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="detailContent" class="story-body"></div>
+            </article>
+        </div>
+    </main>
+
+    <div class="toast" id="toast">تم النسخ بنجاح!</div>
+
+    <footer class="main-footer">
+         <h6> جميع الحقوق محفوظة © Eng. Mahmoud I. Bhar & Dr. Abdulla M. Alyazji</h6>
+    </footer>
+
+
+    <script src="stories.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
